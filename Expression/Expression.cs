@@ -82,7 +82,7 @@ namespace Expression
                     result.Add(builder.Build(startIdex + i));
                 }
 
-               // await Task.Delay(500);
+                await Task.Delay(500);
 
                 if (startIdex == 0)
                     SendProgress(i, expression);
