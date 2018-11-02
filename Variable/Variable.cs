@@ -44,9 +44,13 @@ namespace Variable
 
         public Task<string> ReplaceVariablesAsync(string expression, Dictionary<string, string> values, ExpressionPart[] parts)
         {
-            var expressionActor = ActorProxy.Create<IExpression>(new ActorId("default"), new Uri("fabric:/TechInterviewTask/Actor1ActorService"));
+            if(values == null)
+                throw new ArgumentNullException(nameof(values));
 
-            var variables = parts.Where(x => x.Type == Expression.Interfaces.Type.Variable).ToList();
+            if (parts == null)
+                throw new ArgumentNullException(nameof(parts));
+
+            var variables = parts.Where(x => x.Type == Expression.Interfaces.Type.Variable);
 
             foreach (var variable in variables.OrderByDescending(x => x.Index))
             {

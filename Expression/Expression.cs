@@ -46,6 +46,9 @@ namespace Expression
 
         public async Task ReceiveReminderAsync(string expression, byte[] state, TimeSpan dueTime, TimeSpan period)
         {
+            if (state == null)
+                throw new ArgumentNullException(nameof(state));
+
             var logic = new ExpressionLogic(GetEvent<IExpressionEvents>());
             var parts = await logic.GetExpressionPartsAsync(expression);
             var variables = parts.Where(x => x.Type == Interfaces.Type.Variable).ToArray();
