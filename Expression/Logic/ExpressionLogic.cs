@@ -30,9 +30,12 @@ namespace Expression.Logic
                     var endIndex = expression.IndexOf(')', i);
                     var innerParts = await GetExpressionPartsAsync(expression.Substring(i + 1, endIndex - i), i + 1);
 
-                    result.Add(builder.BuildFunction(startIdex + i));
-                    result.AddRange(innerParts);
+                    if (builder.HasValue())
+                    {
+                        result.Add(builder.BuildFunction(startIdex + i));
+                    }
 
+                    result.AddRange(innerParts);
                     i = ++endIndex;
                 }
                 else if (ch == '"' || ch == '.' || ch == '_' || char.IsNumber(ch) || char.IsLetter(ch))

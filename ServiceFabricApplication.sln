@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Expression.Interfaces", "Ex
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{0E37B128-279D-4A3A-B951-071F8BE94982}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Expression.Tests", "Expression.Tests\Expression.Tests.csproj", "{C583124E-C36F-4244-9ACF-CAAFD0778952}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,14 @@ Global
 		{0E37B128-279D-4A3A-B951-071F8BE94982}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0E37B128-279D-4A3A-B951-071F8BE94982}.Release|x64.ActiveCfg = Release|Any CPU
 		{0E37B128-279D-4A3A-B951-071F8BE94982}.Release|x64.Build.0 = Release|Any CPU
+		{C583124E-C36F-4244-9ACF-CAAFD0778952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C583124E-C36F-4244-9ACF-CAAFD0778952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C583124E-C36F-4244-9ACF-CAAFD0778952}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C583124E-C36F-4244-9ACF-CAAFD0778952}.Debug|x64.Build.0 = Debug|Any CPU
+		{C583124E-C36F-4244-9ACF-CAAFD0778952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C583124E-C36F-4244-9ACF-CAAFD0778952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C583124E-C36F-4244-9ACF-CAAFD0778952}.Release|x64.ActiveCfg = Release|Any CPU
+		{C583124E-C36F-4244-9ACF-CAAFD0778952}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

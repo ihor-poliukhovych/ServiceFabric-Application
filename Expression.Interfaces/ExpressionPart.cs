@@ -11,6 +11,11 @@
 
         }
 
+        public override string ToString()
+        {
+            return "new ExpressionPart { Index = "+Index+", Type = Interfaces.Type."+Type+", Value = \""+Value+"\" }";
+        }
+
         public ExpressionPart(Type type, string value, int index)
         {
             Type = type;
